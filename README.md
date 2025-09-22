@@ -58,7 +58,8 @@ While this frequency is characteristic of certain pathological tremors (e.g. Hol
 
 ### Complete Pipeline Example
 The full driver combines all stages of the rPPG pipeline into a single run — from video input through ROI stabilization, motion compensation, and heart-rate estimation.  
-![Complete pipeline driver output](./Full_Result_Example.pdf)
+
+> ![Complete pipeline driver output](./Full_Result_Example.pdf)
 
 
 ## License
