@@ -1,0 +1,81 @@
+
+from sp_datadisplay import signal_process_amplitude
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+
+
+
+#filename='/Users/henryschnieders/Desktop/Research/My_work/Real_time_recognition/All_face_sections/amplitude_heatmap/Data/resized_inorganic.npy'
+filename='/Users/henryschnieders/documents/Research/My_work/Real_time_recognition/All_face_sections/amplitude_heatmap/Each_pixel/Pixel_matching_methods/Template_Matching/Data/relax_tempmatch.npy'
+
+data=np.load(filename, allow_pickle=True)
+data=data[:-5]
+
+X_DIM=min([frame.shape[0] for frame in data])
+Y_DIM=min([frame.shape[1] for frame in data])
+
+bpm_array=np.zeros((X_DIM,Y_DIM), dtype=np.float32)
+
+
+# plt.figure(figsize=(5,5))
+for i in range(X_DIM):
+    for j in range(Y_DIM):
+        try:
+            amplitudes=[frame[i,j] for frame in data]
+
+            #roi_mean=compute_roi_mean(amplitudes)   
+            # print(type(roi_mean))
+            bpm_array[i,j]=signal_process_amplitude(roi_mean=amplitudes)
+
+            # plt.plot(np.arange(len(roi_mean)), roi_mean)
+            # plt.pause(0.01)
+        except Exception as e:
+            print(e, f'[{i,j}]')
+            continue
+    print(f'done with {i}th row')
+        # amplitudes=[frame[i,j] for frame in data]
+
+        # roi_mean=compute_roi_mean(amplitudes)   
+        # # print(type(roi_mean))
+        # bpm_array[i,j]=signal_process(roi_mean=roi_mean)
+
+# # plt.figure(figsize=(5,5))
+# for i in range(X_DIM):
+#     for j in range(Y_DIM):
+        
+#         amplitudes=[frame[i,j] for frame in data]
+
+#         roi_mean=compute_roi_mean(amplitudes)   
+#         # print(type(roi_mean))
+#         bpm_array[i,j]=signal_process(roi_mean=roi_mean)
+
+#             # plt.plot(np.arange(len(roi_mean)), roi_mean)
+#             # plt.pause(0.01)
+        
+
+# plt.savefig('/Users/henryschnieders/Desktop/Research/My_work/Real_time_recognition/All_face_sections/Data/'+f'{vid_name}'+'_bpm.png')
+#get rid of bad data
+from matplotlib.colors import TwoSlopeNorm
+
+
+
+max_val=np.max(bpm_array)
+min_val=np.min(bpm_array)
+vmin = min_val  # Minimum value for the data range
+vmax = max_val # Maximum value for the data range
+vcenter = 75 #  Set this to the desired midpoint (zero)
+
+# Use TwoSlopeNorm to set the center
+norm = TwoSlopeNorm(vmin=vmin, vcenter=vcenter, vmax=vmax)
+
+ave=np.average(bpm_array)
+
+plt.figure(figsize=(5,5))   
+
+plt.title(f' {ave:.2f} avg amplitude')
+plt.imshow(bpm_array, cmap='seismic', interpolation='nearest', norm=norm)
+plt.colorbar()
+plt.savefig('/Users/henryschnieders/Documents/Research/My_work/Current_Summary/relaxbpm_heatmap_tempmatch.png')
+plt.show()

@@ -1,0 +1,3 @@
+
+
+Use face detection to get the face, then do the chin and other regions again with template matching and see if clarity improves--can do the
