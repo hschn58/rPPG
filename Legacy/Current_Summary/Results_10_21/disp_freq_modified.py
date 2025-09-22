@@ -149,10 +149,10 @@ def denoise_heartrate(roi_mean):
 
 def denoise(signal_data):
         """Denoise a 1D signal using wavelet transform and filtering."""
-        if len(signal_data) < 10:  # 确保信号长度足够
+        if len(signal_data) < 10:  
             return signal_data
 
-        fs = 30  # 采样频率
+        fs = 30  
         b, a = signal.butter(5, [1, 2], btype='bandpass', fs=fs)
         filtered_signal = signal.filtfilt(b, a, signal_data)
 
@@ -162,7 +162,7 @@ def denoise(signal_data):
         coeffs_denoised = [pywt.threshold(c, thr, mode='soft') for c in coeffs]
         denoised_signal = pywt.waverec(coeffs_denoised, 'db4')
 
-        return denoised_signal[:len(signal_data)]  # 确保输出长度一致
+        return denoised_signal[:len(signal_data)]  
 
 def process_video_bpm(processed_npy,vid,x,y,w,h):
     """Process video and generate heatmap of variance for denoised signals."""
