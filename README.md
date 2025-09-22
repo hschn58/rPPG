@@ -57,8 +57,8 @@ Notably, when motion processing was applied in CHROM, a recurring 2.5 Hz artif
 While this frequency is characteristic of certain pathological tremors (e.g. Holmes tremor), no data acquisition volunteers are known to exhibit such conditions.
 
 ### Complete Pipeline Example
-- The full driver combines all stages of the rPPG pipeline into a single run — from video input through ROI stabilization, motion compensation, and heart-rate estimation.  
-- ![Complete pipeline driver output](./Full_Result_Example.pdf)
+The full driver combines all stages of the rPPG pipeline into a single run — from video input through ROI stabilization, motion compensation, and heart-rate estimation.  
+![Complete pipeline driver output](./Full_Result_Example.pdf)
 
 
 ## License
