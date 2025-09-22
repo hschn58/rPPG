@@ -228,7 +228,7 @@ if __name__ == '__main__':
     CHROM_method_script_without = '/Users/henryschnieders/Documents/Research/My_work_parts/chrom_method/CHROM_method_npz_input.py'
 
 
-    data_npy_file = #SOURCE!
+    data_npy_file = '/path/to/video/processed_by/.../VID_TO_DATA_whole_face.py'
 
     data_npz_file = run_pixel_matching(
                         python_path           = python_path,

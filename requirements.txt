@@ -1,12 +1,24 @@
-
-numpy>=1.24
-scipy>=1.10
-opencv-python-headless>=4.8
-matplotlib>=3.7
+# --- core, cross-platform ---
+numpy>=1.26,<2.0
+scipy>=1.10,<1.13
+opencv-python-headless>=4.8,<5
+matplotlib>=3.7,<3.9
 PyWavelets>=1.4
+Pillow>=9.0
+
+# Optional: only add if actually used
+# pandas>=1.5,<2.2     # works with numpy <2.0
+# mediapipe>=0.10      # heavy; needs protobuf; add only if used
+# pyav>=10             # only if you rely on PyAV
+# PyPDF2>=3.0          # only if you generate PDFs
+# pyppeteer>=2.0       # only if you render pages via headless Chromium
+
+# --- tests ---
 pytest>=8.0
 
 # --- macOS-only (skipped on Linux CI) ---
 pyobjc-core; sys_platform == "darwin"
 pyobjc-framework-AVFoundation; sys_platform == "darwin"
+pyobjc-framework-Cocoa; sys_platform == "darwin"
 pyobjc-framework-Vision; sys_platform == "darwin"
+
