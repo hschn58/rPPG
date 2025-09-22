@@ -1,0 +1,10 @@
+numpy
+scipy
+opencv-python-headless
+matplotlib
+PyWavelets
+objc
+cv2
+AVF
+Cocoa
+
