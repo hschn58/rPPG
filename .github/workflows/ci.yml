@@ -26,4 +26,11 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest  # or whatever command you want to run
+        pytest -q || code=$?
+        if [ "${code:-0}" = "5" ]; then
+          echo "No tests collected; treating as success."
+          exit 0
+        else
+          exit "${code:-0}"
+        fi
+
