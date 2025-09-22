@@ -1,3 +1,10 @@
+[![CI](https://github.com/hschn58/rPPG/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/hschn58/rPPG/actions/workflows/ci.yml)
+[![Last Commit](https://img.shields.io/github/last-commit/hschn58/rPPG)](https://github.com/hschn58/rPPG/commits/main)
+
+![Python](https://img.shields.io/badge/python-3.10%20|%203.11-blue)
+![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macOS-lightgrey)
+![License](https://img.shields.io/badge/license-MIT-informational)
+
 # rPPG — Remote Photoplethysmography (Face Video → Heart Rate)
 
 This subproject extracts heart-rate signals from face video with a focus on **robustness to motion and lighting**.  
