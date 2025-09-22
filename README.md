@@ -45,6 +45,6 @@ POS (no motion processing)
 
 Each region’s signal quality, raw intensity, and reconstructed waveform were plotted over ~300 frames. POS (plane-orthogonal-surface) without the motion processing technique generally outperformed the CHROM method with or without motion processing due to precision over different regions from videos with clear facial information. 
 
-![Complete pipeline driver example](./Full_Result_Example.pdf)
+![Complete pipeline driver output](./Full_Result_Example.pdf)
 
 
