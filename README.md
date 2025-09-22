@@ -43,7 +43,11 @@ CHROM (with and without motion processing)
 
 POS (no motion processing)
 
-Each region’s signal quality, raw intensity, and reconstructed waveform were plotted over ~300 frames. POS (plane-orthogonal-surface) without the motion processing technique generally outperformed the CHROM method with or without motion processing due to precision over different regions from videos with clear facial information. 
+Each region’s signal quality (raw intensity) and reconstructed waveform were analyzed across ~300 frames, estimating both heart rate (BPM) and signal‑to‑noise ratio (SNR). In scenarios with stable lighting and clear facial texture, POS without motion correction achieved higher precision than CHROM methods. 
+
+Notably, when motion processing was applied in CHROM, a recurring 2.5 Hz artifact (~150 BPM) appeared in multiple regions. The signal is high-fidelity and stable across time, yet does not correspond to any plausible physiological source. The root cause is currently unknown — potential factors include cumulative error in optical flow stabilization, bounding box jitter, or framewise interpolation drift.
+
+While this frequency is characteristic of certain pathological tremors (e.g. Holmes tremor), no data acquisition volunteers are known to exhibit such conditions.
 
 ![Complete pipeline driver output](./Full_Result_Example.pdf)
 
