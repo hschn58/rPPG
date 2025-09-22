@@ -34,3 +34,17 @@ The [`Full_Stack/`](./Full_Stack) directory contains the **culmination of the rP
 - **Scalability**: designed for batch processing of multiple clips with consistent settings.  
 
 This folder demonstrates how the individual methods explored earlier (optical flow, motion metrics, spectral estimators, and camera consistency checks) come together in a **complete rPPG pipeline**.
+
+## Multi-Region Heart Rate Estimation (CHROM & POS)
+
+As an extension of the core pipeline, we evaluated multiple face regions simultaneously to compare algorithm performance under real-world conditions. The test used five distinct facial ROIs extracted from a video clip, with heart rate (BPM) and signal-to-noise ratio (SNR) estimated via:
+
+CHROM (with and without motion processing)
+
+POS (no motion processing)
+
+Each region’s signal quality, raw intensity, and reconstructed waveform were plotted over ~300 frames. POS (plane-orthogonal-surface) without the motion processing technique generally outperformed the CHROM method with or without motion processing due to precision over different regions from videos with clear facial information. 
+
+(./Full_Result_Example.pdf)
+
+
