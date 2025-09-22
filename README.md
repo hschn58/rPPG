@@ -48,3 +48,7 @@ Each region’s signal quality, raw intensity, and reconstructed waveform were p
 ![Complete pipeline driver output](./Full_Result_Example.pdf)
 
 
+## License
+
+This project is licensed under the [MIT License](./LICENSE).
+
