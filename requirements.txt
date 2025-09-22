@@ -1,9 +1,4 @@
 
-
-
-objc
-AVF
-Cocoa
 numpy>=1.24
 scipy>=1.10
 opencv-python-headless>=4.8
