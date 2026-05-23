@@ -7,7 +7,17 @@
 
 # rPPG — Remote Photoplethysmography (Face Video → Heart Rate)
 
-This subproject extracts heart-rate signals from face video with a focus on **robustness to motion and lighting**.  
+## Publication
+
+This work contributed to the following peer-reviewed publication:
+
+> Shao, Z., Huang, G., Mielczarek, A., Zhou, Q., **Schnieders, H.** & Yu, Z. "Robust spectral sensor for standoff biometric detection." *Nature Sensors* **1**(2), 155–162 (2026). [doi:10.1038/s44460-025-00012-0](https://doi.org/10.1038/s44460-025-00012-0)
+
+The rPPG pipeline developed here — extracting cardiovascular signals from face video using optical flow stabilization, motion-aware filtering, and spectral estimation — was part of the broader biometric detection research in the [Yu Group](https://yu.engr.wisc.edu/) at UW-Madison.
+
+---
+
+This project extracts heart-rate signals from face video with a focus on **robustness to motion and lighting**.  
 The pipeline has evolved from basic spectral estimation toward a more complete stack that integrates:
 
 - **Edge-model AI for ROI detection**: lightweight on-device models provide robust face/ROI timestamping.  
