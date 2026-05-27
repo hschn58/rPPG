@@ -97,7 +97,7 @@ vid = args.vid
 fnum=1000 #just needs to be more than the number of frames in the video
 
 
-video_data='/Users/henryschnieders/documents/Research/My_work/Data/'+vid+'.mp4'
+video_data='<USER_HOME>/documents/Research/My_work/Data/'+vid+'.mp4'
 
 video_data=args.video_data
 
@@ -106,9 +106,9 @@ print(video_data)
 print(f"Processing video: {video_data} with identifier: {vid}")
 
 
-output_path_vid='/Users/henryschnieders/Documents/Research/My_work/Face_detection_methods/data_visualization/'+vid+'_tempmatch.mp4'
-output_path_data='/Users/henryschnieders/Documents/Research/My_work/Data/'+vid+'_padding_mp4.npy'
-model_path='/Users/henryschnieders/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
+output_path_vid='<USER_HOME>/Documents/Research/My_work/Face_detection_methods/data_visualization/'+vid+'_tempmatch.mp4'
+output_path_data='<USER_HOME>/Documents/Research/My_work/Data/'+vid+'_padding_mp4.npy'
+model_path='<USER_HOME>/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
 
 frames, fps, frame_width, frame_height = get_frames(video_data)
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Codec for .mp4 files

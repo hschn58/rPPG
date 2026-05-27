@@ -7,7 +7,7 @@ import numpy as np
 
 
 vid_name='relax'
-filename='/Users/henryschnieders/documents/Research/My_work/Real_time_recognition/All_face_sections/amplitude_heatmap/Each_pixel/Pixel_matching_methods/Template_Matching/Data/relax_tempmatch.npy'
+filename='<USER_HOME>/documents/Research/My_work/Real_time_recognition/All_face_sections/amplitude_heatmap/Each_pixel/Pixel_matching_methods/Template_Matching/Data/relax_tempmatch.npy'
 
 data=np.load(filename, allow_pickle=True)
 data=data[:-4]
@@ -56,7 +56,7 @@ for i in range(X_DIM):
 #             # plt.pause(0.01)
         
 
-# plt.savefig('/Users/henryschnieders/Desktop/Research/My_work/Real_time_recognition/All_face_sections/Data/'+f'{vid_name}'+'_bpm.png')
+# plt.savefig('<USER_HOME>/Desktop/Research/My_work/Real_time_recognition/All_face_sections/Data/'+f'{vid_name}'+'_bpm.png')
 #get rid of bad data
 from matplotlib.colors import TwoSlopeNorm
 
@@ -78,5 +78,5 @@ plt.figure(figsize=(5,5))
 plt.title(f'{vid_name} bpm heatmap-{ave:.2f} avgbpm')
 plt.imshow(bpm_array, cmap='seismic', interpolation='nearest', norm=norm)
 plt.colorbar()
-plt.savefig('/Users/henryschnieders/Documents/Research/My_work/Current_Summary/relaxbpm_heatmap_tempmatch_lowerintensity.png')
+plt.savefig('<USER_HOME>/Documents/Research/My_work/Current_Summary/relaxbpm_heatmap_tempmatch_lowerintensity.png')
 plt.show()

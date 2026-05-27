@@ -117,7 +117,7 @@ def midright_cheek(frame, bbox, DELTA=DELTA, MRCHEEK_HPAD=MRCHEEK_HPAD, MRCHEEK_
 # -----------------------------------------------------------------------------
 # Initialize face detector (YuNet) and camera
 # -----------------------------------------------------------------------------
-model_path = '/Users/henryschnieders/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
+model_path = '<USER_HOME>/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
 detector = cv2.FaceDetectorYN_create(model_path, "", (frame_width, frame_height), score_threshold=0.5)
 
 cap = cv2.VideoCapture(0)
@@ -148,7 +148,7 @@ while True:
         break
 
     # Save a copy for debugging, flip (mirror) and resize
-    cv2.imwrite('/Users/henryschnieders/desktop/Camera_Feed.jpg', frame)
+    cv2.imwrite('<USER_HOME>/desktop/Camera_Feed.jpg', frame)
     frame = cv2.flip(frame, 1)
     frame = cv2.resize(frame, (300, 300))
     frames.append(frame)
@@ -211,7 +211,7 @@ while True:
         break
 
 # Optionally save the extracted regions data for offline analysis
-with open('/Users/henryschnieders/desktop/face_regions.pkl', 'wb') as f:
+with open('<USER_HOME>/desktop/face_regions.pkl', 'wb') as f:
     pickle.dump(face_area, f)
     
 cap.release()

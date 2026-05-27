@@ -124,7 +124,7 @@ if __name__ == "__main__":
     fps = 30
     width = 1760
     height = 1328
-    base_path = "/Users/henryschnieders/Documents/Research/My_Data"
+    base_path = "<USER_HOME>/Documents/Research/My_Data"
 
     # User inputs
     video_name = input("Enter video save name (without extension): ")
@@ -173,7 +173,7 @@ if __name__ == "__main__":
     out = cv2.VideoWriter(output_video.replace(".mp4", "_processed.mp4"), fourcc, fps, (width, height))
 
     # Load face detector
-    model_path = "/Users/henryschnieders/Documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx"
+    model_path = "<USER_HOME>/Documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx"
     detector = cv2.FaceDetectorYN_create(model_path,
                                      "",
                                     (width, height),

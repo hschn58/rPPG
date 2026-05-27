@@ -5,14 +5,39 @@ __pycache__/
 *.pyd
 *.egg-info/
 
-
 # macOS
 .DS_Store
+
+# IDE
+.vscode/
+.idea/
 
 # Jupyter checkpoints
 .ipynb_checkpoints/
 
 # Virtual environments
 venv/
+.env
 .env/
 
+# Data files
+*.npy
+*.npz
+*.pkl
+*.h5
+*.hdf5
+*.csv
+
+# Video files
+*.mp4
+*.avi
+*.mov
+*.MOV
+
+# Model weights
+*.onnx
+*.pt
+*.pth
+
+# Generated output
+*.log

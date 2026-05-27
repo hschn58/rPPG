@@ -180,7 +180,7 @@ def fb_trace_pixels(frames_rgb, lk_params,
 
     if save_npz and trajectories_db:
         base = Path(source_npy_path).stem if source_npy_path else "unknown_source"
-        fname = (f"/Users/henryschnieders/Documents/Research/My_Data/"
+        fname = (f"<USER_HOME>/Documents/Research/My_Data/"
                  f"pixel_trajectories_{base}.npz")
         np.savez_compressed(fname, trajectories=trajectories_db)
         print(f"• saved {len(trajectories_db)} complete tracks → {Path(fname).resolve()}")

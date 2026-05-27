@@ -1,4 +1,4 @@
-import subprocess, time, json, urllib.request, socket, contextlib, signal, asyncio
+import subprocess, sys, time, json, urllib.request, socket, contextlib, signal, asyncio
 from pathlib import Path
 from pyppeteer import launch           # pip install pyppeteer
 import os
@@ -134,7 +134,7 @@ def run_motion_processing(python_path, motion_processing_script, data_npz_file, 
 #     print('\n')
 #     print('\n')
 
-#     return os.path.join('/Users/henryschnieders/Documents/Research/My_Data', video_name + '_wholeface.npy')
+#     return os.path.join('<USER_HOME>/Documents/Research/My_Data', video_name + '_wholeface.npy')
 
 
 def run_pixel_matching(python_path, pixel_matching_script, data_npy_file):
@@ -162,7 +162,7 @@ def run_pixel_matching(python_path, pixel_matching_script, data_npy_file):
 
     base = os.path.basename(data_npy_file).replace('.npy', '')
 
-    return f"/Users/henryschnieders/Documents/Research/My_Data/pixel_trajectories_{base}.npz"
+    return f"<USER_HOME>/Documents/Research/My_Data/pixel_trajectories_{base}.npz"
 
     
 
@@ -219,13 +219,13 @@ def run_CHROM_method_nomotionprocess(python_path, CHROM_method_script_without, d
 
 if __name__ == '__main__':
 
-    python_path = '/opt/homebrew/opt/python@3.12/bin/python3.12'
+    python_path = sys.executable
 
-    video_acquisition_script = '/Users/henryschnieders/Documents/Research/My_work_parts/Video_get_to_npy/VID_TO_DATA_whole_face.py'
-    pixel_matching_script = '/Users/henryschnieders/Documents/Research/My_work_parts/motion_process/temporal_pixel_matching/forward_backward_pixel_matching.py'
-    motion_processing_script = '/Users/henryschnieders/Documents/Research/My_work_parts/motion_process/occulsion_processing/motion_process_fb.py'
-    CHROM_method_script_with = '/Users/henryschnieders/Documents/Research/My_work_parts/chrom_method/CHROM_method_npy_input.py'
-    CHROM_method_script_without = '/Users/henryschnieders/Documents/Research/My_work_parts/chrom_method/CHROM_method_npz_input.py'
+    video_acquisition_script = '<USER_HOME>/Documents/Research/My_work_parts/Video_get_to_npy/VID_TO_DATA_whole_face.py'
+    pixel_matching_script = '<USER_HOME>/Documents/Research/My_work_parts/motion_process/temporal_pixel_matching/forward_backward_pixel_matching.py'
+    motion_processing_script = '<USER_HOME>/Documents/Research/My_work_parts/motion_process/occulsion_processing/motion_process_fb.py'
+    CHROM_method_script_with = '<USER_HOME>/Documents/Research/My_work_parts/chrom_method/CHROM_method_npy_input.py'
+    CHROM_method_script_without = '<USER_HOME>/Documents/Research/My_work_parts/chrom_method/CHROM_method_npz_input.py'
 
 
     data_npy_file = '/path/to/video/processed_by/.../VID_TO_DATA_whole_face.py'
@@ -238,9 +238,9 @@ if __name__ == '__main__':
     
     
 
-    # run as streamlit: /opt/homebrew/bin/streamlit
+    # run as streamlit
     motion_plots_path = os.path.splitext(os.path.basename(data_npy_file))[0] + ".pdf"
-    motion_plots_path = os.path.join('/Users/henryschnieders/Documents/Research/My_Data', motion_plots_path)
+    motion_plots_path = os.path.join('<USER_HOME>/Documents/Research/My_Data', motion_plots_path)
 
     motion_processed_paths  = run_motion_processing(
                                     python_path              = python_path,

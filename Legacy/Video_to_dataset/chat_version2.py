@@ -14,7 +14,7 @@ fps = 30
 # Full resolution parameters (10-bit recording)
 full_width = 1760
 full_height = 1328
-base_path = "/Users/henryschnieders/Documents/Research/My_work/Current_Summary/Starting_4_5_2025/Data"
+base_path = "<USER_HOME>/Documents/Research/My_work/Current_Summary/Starting_4_5_2025/Data"
 
 # User inputs
 video_name = input("Enter video save name (without extension): ")
@@ -123,7 +123,7 @@ def update_face(frame, template, h, w):
 # Create a "small" detector for 300x300 frames
 # -----------------------------------------------------------------------------
 small_size = (300, 300)
-model_path = '/Users/henryschnieders/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
+model_path = '<USER_HOME>/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
 detector_small = cv2.FaceDetectorYN_create(model_path, "", small_size, score_threshold=0.5)
 
 # -----------------------------------------------------------------------------

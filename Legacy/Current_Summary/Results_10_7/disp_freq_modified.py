@@ -10,13 +10,13 @@ import time
 
 
 #path for scripts to convert the avi, mp4 fils to numpy arrays 
-avi_run='/Users/henryschnieders/Documents/Research/My_work/Face_detection_methods/corresponding_dataset_conversion/temmatch_driver_explicitframes_avi.py'
-mp4_run='/Users/henryschnieders/Documents/Research/My_work/Face_detection_methods/corresponding_dataset_conversion/temmatch_driver_explicitframes_mp4.py'
+avi_run='<USER_HOME>/Documents/Research/My_work/Face_detection_methods/corresponding_dataset_conversion/temmatch_driver_explicitframes_avi.py'
+mp4_run='<USER_HOME>/Documents/Research/My_work/Face_detection_methods/corresponding_dataset_conversion/temmatch_driver_explicitframes_mp4.py'
 
 
-base_dir = '/Users/henryschnieders/Documents/Research/My_work/Current_Summary/Results_10_7/Videos'
+base_dir = '<USER_HOME>/Documents/Research/My_work/Current_Summary/Results_10_7/Videos'
 
-model_path ='/Users/henryschnieders/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
+model_path ='<USER_HOME>/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
 
 
 
@@ -56,7 +56,7 @@ def process_video(video_path, ext):
     print(f"Processing video: {vid}")
 
     # Load the associated data file
-    filename = f'/Users/henryschnieders/Documents/Research/My_work/Data/{vid}_padding'+'_'+ext[1:]+ '.npy'
+    filename = f'<USER_HOME>/Documents/Research/My_work/Data/{vid}_padding'+'_'+ext[1:]+ '.npy'
     if not os.path.exists(filename):
         print(f"Data file for video {vid} not found at {filename}. Skipping.")
         return
@@ -98,7 +98,7 @@ def process_video(video_path, ext):
         cv2.rectangle(frame_rgb, (x, y), (x + w, y + h), (255, 0, 0), 2)
 
         #cv2.imshow('frame', frame_rgb)
-        output_face_path = f'/Users/henryschnieders/Documents/Research/My_work/Current_Summary/Results_10_7/out/{vid}'+ext[1:]+'_averagedfaceregion.png'
+        output_face_path = f'<USER_HOME>/Documents/Research/My_work/Current_Summary/Results_10_7/out/{vid}'+ext[1:]+'_averagedfaceregion.png'
         cv2.imwrite(output_face_path, frame_rgb)
         cv2.waitKey(2000)
         cv2.destroyAllWindows()
@@ -149,7 +149,7 @@ def create_bpm_visualizations(bpm_array, vid, x, y, w, h, ext, TwoSlopeNorm=TwoS
     plt.title(f'{vid} - {ave:.2f} avg bpm')
     plt.imshow(bpm_array, cmap='seismic', interpolation='nearest', norm=norm)
     plt.colorbar()
-    plt.savefig(f'/Users/henryschnieders/Documents/Research/My_work/Current_Summary/Results_10_7/out/{vid}_'+ext[1:]+'_heatmap.png')
+    plt.savefig(f'<USER_HOME>/Documents/Research/My_work/Current_Summary/Results_10_7/out/{vid}_'+ext[1:]+'_heatmap.png')
 
     # Plot the histogram of BPM values
     bpm_flattened = bpm_array.flatten()
@@ -159,7 +159,7 @@ def create_bpm_visualizations(bpm_array, vid, x, y, w, h, ext, TwoSlopeNorm=TwoS
     plt.xlabel('Heart Rate (BPM)')
     plt.ylabel('Relative Occurrences')
     plt.grid(axis='y', linestyle='--', alpha=0.7)
-    plt.savefig(f'/Users/henryschnieders/Documents/Research/My_work/Current_Summary/Results_10_7/out/{vid}_'+ext[1:]+'_histogram.png')
+    plt.savefig(f'<USER_HOME>/Documents/Research/My_work/Current_Summary/Results_10_7/out/{vid}_'+ext[1:]+'_histogram.png')
    
 
 

@@ -96,7 +96,7 @@ def average(list_of_arrays):
     return sum(list_of_arrays)/len(list_of_arrays)
 
 
-model_path='/Users/henryschnieders/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
+model_path='<USER_HOME>/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
 detector=cv2.FaceDetectorYN_create(model_path,
                           "", 
                           (frame_width, frame_height),

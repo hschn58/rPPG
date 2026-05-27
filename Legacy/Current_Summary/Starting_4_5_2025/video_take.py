@@ -19,7 +19,7 @@ cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
 
 # Define the codec (H.264 instead of XVID for potential 10-bit support)
 fourcc = cv2.VideoWriter_fourcc(*'H264')  # H.264 codec
-output_file = '/Users/henryschnieders/Documents/Research/My_work/Current_Summary/Starting_4_5_2025/Data/' + description + '.mp4'
+output_file = '<USER_HOME>/Documents/Research/My_work/Current_Summary/Starting_4_5_2025/Data/' + description + '.mp4'
 fps = 50  # Set frames per second
 
 # Create a VideoWriter object

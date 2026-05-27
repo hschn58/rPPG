@@ -104,9 +104,9 @@ def midright_cheek(frame, bbox, DELTA=DELTA, MRCHEEK_HPAD=MRCHEEK_HPAD, MRCHEEK_
 
 def bulk(tot_frames, frame_width, frame_height, frame_interval, DELTA, CHEEK_HPAD, CHEEK_VPAD, CHIN_HPAD, CHIN_VPAD, MLCHEEK_HPAD, MRCHEEK_HPAD, MRCHEEK_VPAD, MLCHEEK_VPAD):
 
-    # output_path='/Users/henryschnieders/Desktop/Research/My work/From_video/face_detection_yunet.mp4'
-    model_path='/Users/henryschnieders/Desktop/Research/My_work/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
-    video_data='/Users/henryschnieders/Desktop/Research/My_work/Data/sporting 1.mp4'
+    # output_path='<USER_HOME>/Desktop/Research/My work/From_video/face_detection_yunet.mp4'
+    model_path='<USER_HOME>/Desktop/Research/My_work/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
+    video_data='<USER_HOME>/Desktop/Research/My_work/Data/sporting 1.mp4'
     
 
     # frame parameters
@@ -195,9 +195,9 @@ if __name__=="__main__":
 
     vid_name='sporting_1'
 
-    data_output_path='/Users/henryschnieders/Desktop/Research/My_work/Data/'+f'{vid_name}'+'_frames.npy'
-    ref_frame_output_path='/Users/henryschnieders/Desktop/Research/My_work/Data/'+f'{vid_name}'+'_frames_ref_frame.npy'
-    area_locations_path='/Users/henryschnieders/Desktop/Research/My_work/Data/'+f'{vid_name}'+'_frames_area_locations.npy'
+    data_output_path='<USER_HOME>/Desktop/Research/My_work/Data/'+f'{vid_name}'+'_frames.npy'
+    ref_frame_output_path='<USER_HOME>/Desktop/Research/My_work/Data/'+f'{vid_name}'+'_frames_ref_frame.npy'
+    area_locations_path='<USER_HOME>/Desktop/Research/My_work/Data/'+f'{vid_name}'+'_frames_area_locations.npy'
 
     start=time.time()
     Amplitude, lenght, ref_frame, area_locations = bulk(tot_frames=TOT_FRAMES, 
@@ -237,7 +237,7 @@ if __name__=="__main__":
 
 
 
-# '/Users/henryschnieders/Desktop/Research/My work/Data/video.MOV'
+# '<USER_HOME>/Desktop/Research/My work/Data/video.MOV'
 
 
 

@@ -93,13 +93,13 @@ print(f"Processing video: {video_data} with identifier: {vid}")
 
 
 
-video_data = '/Users/henryschnieders/documents/Research/My_work/Data/'+vid+'.avi'
+video_data = '<USER_HOME>/documents/Research/My_work/Data/'+vid+'.avi'
 
 video_data = args.video_data
 
-output_path_vid = '/Users/henryschnieders/Documents/Research/My_work/Face_detection_methods/data_visualization/'+vid+'_tempmatch.avi'
-output_path_data = '/Users/henryschnieders/Documents/Research/My_work/Data/'+vid+'_padding_avi.npy'
-model_path = '/Users/henryschnieders/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
+output_path_vid = '<USER_HOME>/Documents/Research/My_work/Face_detection_methods/data_visualization/'+vid+'_tempmatch.avi'
+output_path_data = '<USER_HOME>/Documents/Research/My_work/Data/'+vid+'_padding_avi.npy'
+model_path = '<USER_HOME>/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
 
 
 

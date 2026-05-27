@@ -8,7 +8,7 @@ import cv2
 X_SIZE, Y_SIZE = params.X_SIZE, params.Y_SIZE
 
 vid_name='relax'
-filename='/Users/henryschnieders/Desktop/Research/My_work/Real_time_recognition/All_face_sections/Data/'+f'{vid_name}'+'_frames.npy'
+filename='<USER_HOME>/Desktop/Research/My_work/Real_time_recognition/All_face_sections/Data/'+f'{vid_name}'+'_frames.npy'
 
 data=np.load(filename, allow_pickle=True)
 
@@ -41,10 +41,10 @@ for i in range(X_SIZE):
         # bpm_array[i,j]=signal_process(roi_mean=roi_mean)
 
 
-# plt.savefig('/Users/henryschnieders/Desktop/Research/My_work/Real_time_recognition/All_face_sections/Data/'+f'{vid_name}'+'_bpm.png')
+# plt.savefig('<USER_HOME>/Desktop/Research/My_work/Real_time_recognition/All_face_sections/Data/'+f'{vid_name}'+'_bpm.png')
 
 plt.figure(figsize=(5,5))   
 plt.imshow(bpm_array, cmap='viridis', interpolation='nearest')
 plt.colorbar()
-plt.savefig('/Users/henryschnieders/Desktop/Research/My_work/Real_time_recognition/All_face_sections/Data/'+f'{vid_name}'+'_bpm_array.png')
+plt.savefig('<USER_HOME>/Desktop/Research/My_work/Real_time_recognition/All_face_sections/Data/'+f'{vid_name}'+'_bpm_array.png')
 plt.show()

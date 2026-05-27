@@ -1,10 +1,11 @@
+import sys
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st
-import os 
+import os
 
-import argparse 
+import argparse
 
 import subprocess
 
@@ -218,7 +219,7 @@ if __name__ == '__main__':
 
     base = os.path.basename(pix_trajectories).split('.')[0].replace('pixel_trajectories_', '')  # e.g. "testagain_6_10_wholeface"
 
-    out_file  = f"/Users/henryschnieders/Documents/Research/My_Data/rgb_per_region_{base}.npy"
+    out_file  = f"<USER_HOME>/Documents/Research/My_Data/rgb_per_region_{base}.npy"
     np.save(out_file, RGB_region_signals, allow_pickle=True)
 
 
@@ -283,7 +284,7 @@ if __name__ == '__main__':
     st.pyplot(fig)  # Display in Streamlit app
     plt.close(fig)  # Close the figure to free memory
 
-    plt.savefig('/Users/henryschnieders/Desktop/movavg_intensity_per_region.png', dpi=300)
+    plt.savefig('<USER_HOME>/Desktop/movavg_intensity_per_region.png', dpi=300)
 
     # --- estimate BPM: heart rate from polished signal -----------------
     hr_est = []
@@ -323,7 +324,7 @@ if __name__ == '__main__':
     st.pyplot(fig)  # Display in Streamlit app
     plt.close(fig)  # Close the figure to free memory
 
-    plt.savefig('/Users/henryschnieders/Desktop/raw_grayscale_per_region.png', dpi=300)
+    plt.savefig('<USER_HOME>/Desktop/raw_grayscale_per_region.png', dpi=300)
 
     # --------- Plot 1: motion ----------
     fig = plt.figure(figsize=(12,10))
@@ -339,7 +340,7 @@ if __name__ == '__main__':
     st.pyplot(fig)  # Display in Streamlit app
     plt.close(fig)  # Close the figure to free memory
 
-    plt.savefig('/Users/henryschnieders/Desktop/motion_per_region.png', dpi=300)
+    plt.savefig('<USER_HOME>/Desktop/motion_per_region.png', dpi=300)
 
     # --------- Plot 2: intensity -------
     fig = plt.figure(figsize=(12,10))
@@ -354,7 +355,7 @@ if __name__ == '__main__':
     st.pyplot(fig)  # Display in Streamlit app
     plt.close(fig)  # Close the figure to free memory
 
-    plt.savefig('/Users/henryschnieders/Desktop/avg_intensity_per_region.png', dpi=300)
+    plt.savefig('<USER_HOME>/Desktop/avg_intensity_per_region.png', dpi=300)
 
     # lookup example
     who = "x250_y180"
@@ -385,7 +386,7 @@ if __name__ == '__main__':
     st.markdown('<div id="done"></div>', unsafe_allow_html=True)
 
     subprocess.run([
-        "/opt/homebrew/opt/python@3.12/bin/python3.12",
-        "/Users/henryschnieders/Documents/Research/My_work_parts/motion_process/view_frame_brightness.py",
-        "/Users/henryschnieders/Documents/Research/My_Data/testagain_6_10_wholeface.npy"
+        sys.executable,
+        "<USER_HOME>/Documents/Research/My_work_parts/motion_process/view_frame_brightness.py",
+        "<USER_HOME>/Documents/Research/My_Data/testagain_6_10_wholeface.npy"
     ])

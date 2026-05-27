@@ -1,8 +1,8 @@
 import cv2
 import numpy as np
 
-model_path='/Users/henryschnieders/Desktop/Research/My_work/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
-data="/Users/henryschnieders/Desktop/Research/My_work/Data/intensity_map.npy"
+model_path='<USER_HOME>/Desktop/Research/My_work/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
+data="<USER_HOME>/Desktop/Research/My_work/Data/intensity_map.npy"
 #img_out_path=".../png_detection_nparray.png"
 
 detector=cv2.FaceDetectorYN_create(model_path,

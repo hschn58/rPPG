@@ -98,7 +98,7 @@ vid = args.vid
 fnum=1000 #just needs to be more than the number of frames in the video
 
 
-#video_data='/Users/henryschnieders/Documents/Research/My_work/Current_Summary/Results_10_21/Videos/trimmed/mp4/100_light.mp4'
+#video_data='<USER_HOME>/Documents/Research/My_work/Current_Summary/Results_10_21/Videos/trimmed/mp4/100_light.mp4'
 
 video_data=args.video_data
 
@@ -107,9 +107,9 @@ video_data=args.video_data
 
 #vid='100_light'
 
-output_path_vid='/Users/henryschnieders/Documents/Research/My_work/Face_detection_methods/data_visualization/'+vid+'_tempmatch.mp4'
-output_path_data='/Users/henryschnieders/Documents/Research/My_work/Data/'+vid+'_padding_color_mp4.npy'
-model_path='/Users/henryschnieders/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
+output_path_vid='<USER_HOME>/Documents/Research/My_work/Face_detection_methods/data_visualization/'+vid+'_tempmatch.mp4'
+output_path_data='<USER_HOME>/Documents/Research/My_work/Data/'+vid+'_padding_color_mp4.npy'
+model_path='<USER_HOME>/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
 
 frames, fps, frame_width, frame_height = get_frames(video_data)
 

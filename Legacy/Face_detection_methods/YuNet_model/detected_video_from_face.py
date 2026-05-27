@@ -66,9 +66,9 @@ def main():
     tot_frames=2000
     frame_interval=1
 
-    output_path='/Users/henryschnieders/Desktop/face_detection_yunet_relax.mp4'
-    model_path='/Users/henryschnieders/Documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
-    video_data='/Users/henryschnieders/Documents/Research/My_work/Current_Summary/Results_10_21/Videos/trimmed/mp4/100_light.mp4'
+    output_path='<USER_HOME>/Desktop/face_detection_yunet_relax.mp4'
+    model_path='<USER_HOME>/Documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
+    video_data='<USER_HOME>/Documents/Research/My_work/Current_Summary/Results_10_21/Videos/trimmed/mp4/100_light.mp4'
 
     frames, fps, frame_width, frame_height = get_frames(video_data, tot_frames)
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Codec for .mp4 files
@@ -115,7 +115,7 @@ if __name__=="__main__":
 
 
 
-# '/Users/henryschnieders/Desktop/Research/My work/Data/video.MOV'
+# '<USER_HOME>/Desktop/Research/My work/Data/video.MOV'
 
 
 

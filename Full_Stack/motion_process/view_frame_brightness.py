@@ -4,7 +4,7 @@ from pathlib import Path
 import argparse
 
 parser = argparse.ArgumentParser(description="Visualise mean brightness of video frames")
-parser.add_argument("file", type=str, default = '/Users/henryschnieders/Documents/Research/My_Data/testagain_6_10_wholeface.npy',  help="Path to the .npy file containing video frames")
+parser.add_argument("file", type=str, default = '<USER_HOME>/Documents/Research/My_Data/testagain_6_10_wholeface.npy',  help="Path to the .npy file containing video frames")
 
 args = parser.parse_args()
 

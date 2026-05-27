@@ -87,9 +87,9 @@ def save_to_video(intensity_frames, output_video_path, fps=30):
     print(f"Video saved to {output_video_path}")
 
 def main():
-    folder_path = '/Users/henryschnieders/Documents/Research/My_work/Data/New_sporting/1'  # Update this path to the location of your .mat files
-    output_npy_path = '/Users/henryschnieders/Documents/Research/My_work/Data/New_sporting/1/output_intensity_frames.npy'
-    output_video_path = '/Users/henryschnieders/Documents/Research/My_work/Data/New_sporting/1/output_intensity_video.mp4'
+    folder_path = '<USER_HOME>/Documents/Research/My_work/Data/New_sporting/1'  # Update this path to the location of your .mat files
+    output_npy_path = '<USER_HOME>/Documents/Research/My_work/Data/New_sporting/1/output_intensity_frames.npy'
+    output_video_path = '<USER_HOME>/Documents/Research/My_work/Data/New_sporting/1/output_intensity_video.mp4'
 
     # Load I_ and Q_ data from .mat files
     I_frames, Q_frames = load_mat_files(folder_path)

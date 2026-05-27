@@ -10,13 +10,13 @@ import numpy as np
 
 
 
-#filename='/Users/henryschnieders/Desktop/Research/My_work/Real_time_recognition/All_face_sections/amplitude_heatmap/Data/resized_inorganic.npy'
+#filename='<USER_HOME>/Desktop/Research/My_work/Real_time_recognition/All_face_sections/amplitude_heatmap/Data/resized_inorganic.npy'
 
 vid='recovery'
 
 
 output_description='padding_tempmatch_denoise'
-filename='/Users/henryschnieders/Documents/Research/My_work/Data/'+vid+'_padding.npy'
+filename='<USER_HOME>/Documents/Research/My_work/Data/'+vid+'_padding.npy'
 
 
 
@@ -68,7 +68,7 @@ for i in range(X_DIM):
 #             # plt.pause(0.01)
         
 
-# plt.savefig('/Users/henryschnieders/Desktop/Research/My_work/Real_time_recognition/All_face_sections/Data/'+f'{vid_name}'+'_bpm.png')
+# plt.savefig('<USER_HOME>/Desktop/Research/My_work/Real_time_recognition/All_face_sections/Data/'+f'{vid_name}'+'_bpm.png')
 #get rid of bad data
 # from matplotlib.colors import TwoSlopeNorm
 
@@ -93,5 +93,5 @@ plt.imshow(bpm_array, cmap='autumn_r', interpolation='nearest')
 
 clb=plt.colorbar()
 clb.set_label('relative coefficient amplitude', rotation=270, labelpad=20)
-plt.savefig('/Users/henryschnieders/Documents/Research/My_work/Face_detection_methods/data_visualization/'+vid+'_amplitude_tempmatch.png')
+plt.savefig('<USER_HOME>/Documents/Research/My_work/Face_detection_methods/data_visualization/'+vid+'_amplitude_tempmatch.png')
 plt.show()

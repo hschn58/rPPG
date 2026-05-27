@@ -153,7 +153,7 @@ if __name__ == "__main__":
 
     base = os.path.basename(data_path).split('.')[0].replace('rgb_per_region_','') + '_CHROM_wmotionprocess.pdf'
 
-    pdf_path = f'/Users/henryschnieders/Documents/Research/My_Data/{base}'
+    pdf_path = f'<USER_HOME>/Documents/Research/My_Data/{base}'
 
     with PdfPages(pdf_path) as pdf:
         for f in figs:

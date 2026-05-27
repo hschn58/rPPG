@@ -144,14 +144,14 @@ if __name__ == "__main__":
             plt.xlabel("Frame")
         plt.legend()
 
-    plt.savefig('/Users/henryschnieders/Desktop/chrom_signal_per_region2.png', dpi=300)
+    plt.savefig('<USER_HOME>/Desktop/chrom_signal_per_region2.png', dpi=300)
 
 
     figs = [fig1]
 
     base = os.path.basename(data_path).split('.')[0].replace('rgb_per_region_','') + '_CHROM_nomotionprocess.pdf'
 
-    pdf_path = f'/Users/henryschnieders/Documents/Research/My_Data/{base}'
+    pdf_path = f'<USER_HOME>/Documents/Research/My_Data/{base}'
 
     with PdfPages(pdf_path) as pdf:
         for f in figs:

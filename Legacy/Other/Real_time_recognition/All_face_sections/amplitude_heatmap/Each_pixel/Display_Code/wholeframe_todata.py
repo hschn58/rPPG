@@ -81,9 +81,9 @@ def resize_frame(frame, target_height, target_width):
 
 def bulk(tot_frames, frame_width, frame_height, frame_interval, DELTA, CHEEK_HPAD, CHEEK_VPAD, CHIN_HPAD, CHIN_VPAD, MLCHEEK_HPAD, MRCHEEK_HPAD, MRCHEEK_VPAD, MLCHEEK_VPAD, X_SIZE=X_SIZE, Y_SIZE=Y_SIZE):
 
-    # output_path='/Users/henryschnieders/Desktop/Research/My work/From_video/face_detection_yunet.mp4'
-    model_path='/Users/henryschnieders/Desktop/Research/My_work/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
-    video_data='/Users/henryschnieders/Desktop/Research/My_work/Data/relax.mp4'
+    # output_path='<USER_HOME>/Desktop/Research/My work/From_video/face_detection_yunet.mp4'
+    model_path='<USER_HOME>/Desktop/Research/My_work/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
+    video_data='<USER_HOME>/Desktop/Research/My_work/Data/relax.mp4'
     
 
     # frame parameters
@@ -180,7 +180,7 @@ if __name__=="__main__":
 
     vid_name='relax'
 
-    data_output_path='/Users/henryschnieders/Desktop/Research/My_work/Real_time_recognition/All_face_sections/Approaches/Each_pixel/Data/'+f'{vid_name}'+'_frames_pixels.npy'
+    data_output_path='<USER_HOME>/Desktop/Research/My_work/Real_time_recognition/All_face_sections/Approaches/Each_pixel/Data/'+f'{vid_name}'+'_frames_pixels.npy'
 
     start=time.time()
     Amplitude, lenght = bulk(tot_frames=TOT_FRAMES, 
@@ -218,7 +218,7 @@ if __name__=="__main__":
 
 
 
-# '/Users/henryschnieders/Desktop/Research/My work/Data/video.MOV'
+# '<USER_HOME>/Desktop/Research/My work/Data/video.MOV'
 
 
 

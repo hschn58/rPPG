@@ -90,11 +90,11 @@ def main(frames, roi, h, w, output_video_path, fps):
     return area
 
 if __name__ == "__main__":
-    npy_file_path = '/Users/henryschnieders/Documents/Research/My_work/Data/New_sporting/1/output_intensity_frames.npy'
-    output_path_vid = '/Users/henryschnieders/Documents/Research/My_work/Face_detection_methods/data_visualization/sporting_tempmatch.mp4'
-    output_path_data = '/Users/henryschnieders/Documents/Research/My_work/Data/sporting_padding.npy'
+    npy_file_path = '<USER_HOME>/Documents/Research/My_work/Data/New_sporting/1/output_intensity_frames.npy'
+    output_path_vid = '<USER_HOME>/Documents/Research/My_work/Face_detection_methods/data_visualization/sporting_tempmatch.mp4'
+    output_path_data = '<USER_HOME>/Documents/Research/My_work/Data/sporting_padding.npy'
 
-    model_path = '/Users/henryschnieders/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
+    model_path = '<USER_HOME>/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
 
     # Load frames from the .npy file
     frames, frame_count, frame_width, frame_height = get_frames_from_npy(npy_file_path)

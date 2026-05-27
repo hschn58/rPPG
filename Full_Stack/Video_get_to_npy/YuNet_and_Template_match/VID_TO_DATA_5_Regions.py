@@ -60,8 +60,8 @@ ffmpeg_command = [
 ]
 """
 
-model_path = "/Users/henryschnieders/Documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx"
-save_path =  "/Users/henryschnieders/Documents/Research/My_Data"
+model_path = "<USER_HOME>/Documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx"
+save_path =  "<USER_HOME>/Documents/Research/My_Data"
 
 
 

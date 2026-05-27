@@ -7,8 +7,8 @@ import subprocess
 import time
 
 
-mp4_run='/Users/henryschnieders/Documents/Research/My_work/Face_detection_methods/corresponding_dataset_conversion/temmatch_driver_explicitframes_color_mp4.py'
-model_path ='/Users/henryschnieders/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
+mp4_run='<USER_HOME>/Documents/Research/My_work/Face_detection_methods/corresponding_dataset_conversion/temmatch_driver_explicitframes_color_mp4.py'
+model_path ='<USER_HOME>/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
 
 
 base_dir =  os.path.dirname(os.path.realpath(__file__))
@@ -248,7 +248,7 @@ def process_video_bpm(processed_npy,vid,x,y,w,h):
 #     print(f"Processing video: {vid}")
 
 #     # Load the associated data file
-#     filename = '/Users/henryschnieders/Documents/Research/My_work/Data/'+vid+'_padding_color_mp4.npy'
+#     filename = '<USER_HOME>/Documents/Research/My_work/Data/'+vid+'_padding_color_mp4.npy'
 #     if not os.path.exists(filename):
 #         print(f"Data file for video {vid} not found at {filename}. Skipping.")
 #         return
@@ -289,7 +289,7 @@ def process_video(video_path):
     vid = os.path.splitext(os.path.basename(video_path))[0]
     print(f"Processing video: {vid}")
 
-    filename = '/Users/henryschnieders/Documents/Research/My_work/Data/' + vid + '_padding_color_mp4.npy'
+    filename = '<USER_HOME>/Documents/Research/My_work/Data/' + vid + '_padding_color_mp4.npy'
     
     # Check if the file already exists, skip if it does
     if os.path.exists(filename):

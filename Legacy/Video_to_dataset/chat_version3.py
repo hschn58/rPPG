@@ -14,7 +14,7 @@ duration = 10         # seconds
 fps = 30
 full_width = 1760
 full_height = 1328
-base_path = "/Users/henryschnieders/Documents/Research/My_work/Current_Summary/Starting_4_5_2025/Data"
+base_path = "<USER_HOME>/Documents/Research/My_work/Current_Summary/Starting_4_5_2025/Data"
 
 video_name = input("Enter video save name (without extension): ")
 initial_hr = int(input("Enter heart rate at the beginning (bpm): "))
@@ -53,7 +53,7 @@ if process.returncode != 0:
 small_size = (300, 300)
 
 # Create a small-face detector (YuNet requires 300x300)
-model_path = '/Users/henryschnieders/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
+model_path = '<USER_HOME>/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
 detector_small = cv2.FaceDetectorYN_create(model_path, "", small_size, score_threshold=0.5)
 
 # Open the video with cv2.VideoCapture (this will decode to 8-bit)

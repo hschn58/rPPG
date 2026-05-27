@@ -78,9 +78,9 @@ def bulk():
     CHIN_VPAD=7/8
 
 
-    output_path='/Users/henryschnieders/Desktop/Research/My_work/Real_time_recognition/All_face_sections/amplitude heatmap/Results/face_detection_yunet_noface.mp4'
-    model_path='/Users/henryschnieders/Desktop/Research/My_work/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
-    video_data='/Users/henryschnieders/Desktop/Research/My_work/Data/inorganic.MOV'
+    output_path='<USER_HOME>/Desktop/Research/My_work/Real_time_recognition/All_face_sections/amplitude heatmap/Results/face_detection_yunet_noface.mp4'
+    model_path='<USER_HOME>/Desktop/Research/My_work/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
+    video_data='<USER_HOME>/Desktop/Research/My_work/Data/inorganic.MOV'
 
     frames, fps = get_frames(video_data, tot_frames, frame_width)
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Codec for .mp4 files
@@ -132,7 +132,7 @@ if __name__=="__main__":
 
 
 
-# '/Users/henryschnieders/Desktop/Research/My work/Data/video.MOV'
+# '<USER_HOME>/Desktop/Research/My work/Data/video.MOV'
 
 
 

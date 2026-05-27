@@ -91,8 +91,8 @@ ffmpeg_command = [
 ]
 """
 
-model_path = "/Users/henryschnieders/Documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx"
-save_path =  "/Users/henryschnieders/Documents/Research/My_Data"
+model_path = "<USER_HOME>/Documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx"
+save_path =  "<USER_HOME>/Documents/Research/My_Data"
 
 
 
@@ -350,7 +350,7 @@ cut_param = 4
 duration  = 12 + cut_param  
 width  = None   # let FFmpeg tell us
 height = None
-base_path = save_path  # "/Users/henryschnieders/Documents/Research/My_Data"
+base_path = save_path  # "<USER_HOME>/Documents/Research/My_Data"
 
 fps = max_fps_for_avfoundation("0", width, height)   # auto-detect
 print(f"Using {fps} fps (maximum supported for {width}×{height})")

@@ -56,9 +56,9 @@ def resize_frame(frame, target_height, target_width):
 def bulk(tot_frames=1000):
 
 
-    # output_path='/Users/henryschnieders/Desktop/Research/My work/From_video/face_detection_yunet.mp4'
-    model_path='/Users/henryschnieders/Desktop/Research/My_work/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
-    video_data='/Users/henryschnieders/Desktop/Research/My_work/Data/relax.mp4'
+    # output_path='<USER_HOME>/Desktop/Research/My work/From_video/face_detection_yunet.mp4'
+    model_path='<USER_HOME>/Desktop/Research/My_work/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
+    video_data='<USER_HOME>/Desktop/Research/My_work/Data/relax.mp4'
 
 
     frames, _, frame_width, frame_height = get_frames(video_data, tot_frames)
@@ -143,7 +143,7 @@ if __name__=="__main__":
 
     vid_name='relax'
 
-    data_output_path='/Users/henryschnieders/Desktop/Research/My_work/Real_time_recognition/All_face_sections/frequency_heatmap/Approaches/Each_pixel/Template_matching/freq_map_tempmatch/Data/'+f'{vid_name}'+'_frames_pixels.npy'
+    data_output_path='<USER_HOME>/Desktop/Research/My_work/Real_time_recognition/All_face_sections/frequency_heatmap/Approaches/Each_pixel/Template_matching/freq_map_tempmatch/Data/'+f'{vid_name}'+'_frames_pixels.npy'
 
     start=time.time()
     Amplitude, lenght = bulk()
@@ -169,7 +169,7 @@ if __name__=="__main__":
 
 
 
-# '/Users/henryschnieders/Desktop/Research/My work/Data/video.MOV'
+# '<USER_HOME>/Desktop/Research/My work/Data/video.MOV'
 
 
 

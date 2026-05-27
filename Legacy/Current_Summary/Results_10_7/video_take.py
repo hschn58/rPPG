@@ -21,7 +21,7 @@ cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
 
 # Define the codec and create a VideoWriter object to save the video
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-output_file = '/Users/henryschnieders/Documents/Research/My_work/Current_Summary/Results_10_7/Videos/'+description+'.avi'  # Specify the output file path
+output_file = '<USER_HOME>/Documents/Research/My_work/Current_Summary/Results_10_7/Videos/'+description+'.avi'  # Specify the output file path
 fps = 50  # Set frames per second (you can adjust this value)
 
 

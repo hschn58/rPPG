@@ -120,7 +120,7 @@ def signal_process_bpm(roi_mean, fps):
     top5_frequencies = frequencies_in_range[top5_indices]
     top5_spectrum = spectrum_in_range[top5_indices]
     # 计算加权平均
-    #np.save(f'/Users/henryschnieders/Desktop/Research/My_work/Real_time_recognition/All_face_sections/Approaches/Each_pixel/Data/top5_spectrum_{i}_{j}.npy',top5_spectrum)
+    #np.save(f'<USER_HOME>/Desktop/Research/My_work/Real_time_recognition/All_face_sections/Approaches/Each_pixel/Data/top5_spectrum_{i}_{j}.npy',top5_spectrum)
     FFT_heart_rate = np.average(top5_frequencies, weights=top5_spectrum)
 
     wavelet = 'morl' # 'morl'

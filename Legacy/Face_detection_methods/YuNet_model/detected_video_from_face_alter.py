@@ -67,9 +67,9 @@ def main():
     frame_interval=15
     score_threshold = 0.05
 
-    output_path='/Users/henryschnieders/Desktop/Research/My_work/YuNet_Efficacy_Tests/results/faceup_yunet_st'+f'{score_threshold}'+'.mp4'
-    model_path='/Users/henryschnieders/Desktop/Research/My_work/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
-    video_data='/Users/henryschnieders/Desktop/Research/My_work/Data/move_face_up.MOV'
+    output_path='<USER_HOME>/Desktop/Research/My_work/YuNet_Efficacy_Tests/results/faceup_yunet_st'+f'{score_threshold}'+'.mp4'
+    model_path='<USER_HOME>/Desktop/Research/My_work/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
+    video_data='<USER_HOME>/Desktop/Research/My_work/Data/move_face_up.MOV'
 
     frames, fps = get_frames(video_data, tot_frames, frame_width)
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Codec for .mp4 files
@@ -116,7 +116,7 @@ if __name__=="__main__":
 
 
 
-# '/Users/henryschnieders/Desktop/Research/My work/Data/video.MOV'
+# '<USER_HOME>/Desktop/Research/My work/Data/video.MOV'
 
 
 

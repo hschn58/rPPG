@@ -10,8 +10,8 @@ import numpy as np
 
 
 
-#filename='/Users/henryschnieders/Desktop/Research/My_work/Real_time_recognition/All_face_sections/amplitude_heatmap/Data/resized_inorganic.npy'
-filename='/Users/henryschnieders/documents/Research/My_work/Real_time_recognition/All_face_sections/amplitude_heatmap/Each_pixel/Pixel_matching_methods/Template_Matching/Data/relax_tempmatch.npy'
+#filename='<USER_HOME>/Desktop/Research/My_work/Real_time_recognition/All_face_sections/amplitude_heatmap/Data/resized_inorganic.npy'
+filename='<USER_HOME>/documents/Research/My_work/Real_time_recognition/All_face_sections/amplitude_heatmap/Each_pixel/Pixel_matching_methods/Template_Matching/Data/relax_tempmatch.npy'
 
 data=np.load(filename, allow_pickle=True)
 data=data[:-5]
@@ -58,7 +58,7 @@ for i in range(X_DIM):
 #             # plt.pause(0.01)
         
 
-# plt.savefig('/Users/henryschnieders/Desktop/Research/My_work/Real_time_recognition/All_face_sections/Data/'+f'{vid_name}'+'_bpm.png')
+# plt.savefig('<USER_HOME>/Desktop/Research/My_work/Real_time_recognition/All_face_sections/Data/'+f'{vid_name}'+'_bpm.png')
 #get rid of bad data
 # from matplotlib.colors import TwoSlopeNorm
 
@@ -83,5 +83,5 @@ plt.imshow(bpm_array, cmap='autumn_r', interpolation='nearest')
 
 clb=plt.colorbar()
 clb.set_label('relative coefficient amplitude', rotation=270, labelpad=20)
-plt.savefig('/Users/henryschnieders/Desktop/Research/My_work/Real_time_recognition/All_face_sections/amplitude_heatmap/Results/relax_amplitude_tempmatch.png')
+plt.savefig('<USER_HOME>/Desktop/Research/My_work/Real_time_recognition/All_face_sections/amplitude_heatmap/Results/relax_amplitude_tempmatch.png')
 plt.show()

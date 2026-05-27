@@ -6,8 +6,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-filename='/Users/henryschnieders/Documents/Research/My_work/Data/100_light_94_94_padding_color_mp4.npy'
-vid_path='/Users/henryschnieders/Documents/Research/My_work/Current_Summary/Results_10_21/Videos/mp4/100_light_94_94.mp4'
+filename='<USER_HOME>/Documents/Research/My_work/Data/100_light_94_94_padding_color_mp4.npy'
+vid_path='<USER_HOME>/Documents/Research/My_work/Current_Summary/Results_10_21/Videos/mp4/100_light_94_94.mp4'
 
 
 
@@ -184,5 +184,5 @@ plt.ylabel('Coefficient Magnitude')
 plt.title(f'Coefficient Magnitude for all channels')
 
 plt.grid('on')
-plt.savefig('/Users/henryschnieders/Documents/Research/My_work/Current_Summary/Results_10_28/results/'+'all_'+'orig_' 'averaged.png', dpi=600)
+plt.savefig('<USER_HOME>/Documents/Research/My_work/Current_Summary/Results_10_28/results/'+'all_'+'orig_' 'averaged.png', dpi=600)
 plt.show()

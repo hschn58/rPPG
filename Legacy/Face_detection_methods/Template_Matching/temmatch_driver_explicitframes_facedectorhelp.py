@@ -90,9 +90,9 @@ def main(frames, roi, detector, out):
 if __name__=="__main__":
 
     fnum=1000
-    video_data='/Users/henryschnieders/Desktop/Research/My_work/Data/video2.MOV'
-    output_path='/Users/henryschnieders/Desktop/Research/My_work/Real_time_recognition/All_face_sections/amplitude_heatmap/Each_pixel/Pixel_matching_methods/Template_Matching/Results/inorganic_temmatch_3.mp4'
-    model_path='/Users/henryschnieders/Desktop/Research/My_work/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
+    video_data='<USER_HOME>/Desktop/Research/My_work/Data/video2.MOV'
+    output_path='<USER_HOME>/Desktop/Research/My_work/Real_time_recognition/All_face_sections/amplitude_heatmap/Each_pixel/Pixel_matching_methods/Template_Matching/Results/inorganic_temmatch_3.mp4'
+    model_path='<USER_HOME>/Desktop/Research/My_work/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
 
     
     frames, fps, frame_width, frame_height = get_frames(video_data)

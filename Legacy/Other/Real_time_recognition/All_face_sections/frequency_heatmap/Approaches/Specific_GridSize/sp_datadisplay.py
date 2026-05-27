@@ -12,8 +12,8 @@ import os
 
 def load_noise():
     # check if the noise is got previously.
-    filename_I = '/Users/henryschnieders/Desktop/Research/My work/Data/noise_IB.npy'
-    filename_Q = '/Users/henryschnieders/Desktop/Research/My work/Data/noise_QB.npy'
+    filename_I = '<USER_HOME>/Desktop/Research/My work/Data/noise_IB.npy'
+    filename_Q = '<USER_HOME>/Desktop/Research/My work/Data/noise_QB.npy'
     if os.path.isfile(filename_I) and os.path.isfile(filename_Q):
         noise_I = np.load(filename_I)
         noise_Q = np.load(filename_Q)
@@ -249,7 +249,7 @@ if __name__ == '__main__':
     x_size, y_size = wholeframe_todata.bulk.x_size, wholeframe_todata.bulk.y_size
 
     vid_name='sporting_1'
-    filename='/Users/henryschnieders/Desktop/Research/My_work/Real_time_recognition/All_face_sections/Data/'+f'{vid_name}'+'_frames.npy'
+    filename='<USER_HOME>/Desktop/Research/My_work/Real_time_recognition/All_face_sections/Data/'+f'{vid_name}'+'_frames.npy'
     Amplitude_ = np.load(filename)
     print(Amplitude_.shape)
     

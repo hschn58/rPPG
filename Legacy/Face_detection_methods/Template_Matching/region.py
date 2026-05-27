@@ -99,8 +99,8 @@ def main():
     size=frame_width
 
 
-    output_path='/Users/henryschnieders/Desktop/Research/My_work/Real_time_recognition/All_face_sections/amplitude_heatmap/Each_pixel/Pixel_matching_methods/Optical_Flow/Results/optical_flow.mp4'
-    video_data='/Users/henryschnieders/Desktop/Research/My_work/Data/inorganic.MOV'
+    output_path='<USER_HOME>/Desktop/Research/My_work/Real_time_recognition/All_face_sections/amplitude_heatmap/Each_pixel/Pixel_matching_methods/Optical_Flow/Results/optical_flow.mp4'
+    video_data='<USER_HOME>/Desktop/Research/My_work/Data/inorganic.MOV'
 
     frames, fps = get_frames(video_data, tot_frames, frame_width)
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Codec for .mp4 files
@@ -145,7 +145,7 @@ if __name__=="__main__":
 
 
 
-# '/Users/henryschnieders/Desktop/Research/My work/Data/video.MOV'
+# '<USER_HOME>/Desktop/Research/My work/Data/video.MOV'
 
 
 

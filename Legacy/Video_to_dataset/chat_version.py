@@ -94,7 +94,7 @@ fourcc = cv2.VideoWriter_fourcc(*'mp4v')
 out = cv2.VideoWriter(output_video_filename, fourcc, fps, (FRAME_WIDTH, FRAME_HEIGHT))
 
 # Load YuNet face detector (update model_path as necessary)
-model_path = '/Users/henryschnieders/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
+model_path = '<USER_HOME>/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
 detector = cv2.FaceDetectorYN_create(model_path, "", (FRAME_WIDTH, FRAME_HEIGHT), score_threshold=0.5)
 
 # =============================================================================

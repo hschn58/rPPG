@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 # Load the .npy file
 # Replace 'your_file.npy' with the actual path to your .npy file
-data = np.load('/Users/henryschnieders/Documents/Research/My_work/Current_Summary/Starting_4_5_2025/Data/test415_545_regions.npy', allow_pickle=True)
+data = np.load('<USER_HOME>/Documents/Research/My_work/Current_Summary/Starting_4_5_2025/Data/test415_545_regions.npy', allow_pickle=True)
 
 
 # ---------------------------

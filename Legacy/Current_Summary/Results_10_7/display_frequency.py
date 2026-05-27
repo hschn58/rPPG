@@ -16,7 +16,7 @@ vid='today'
 
 
 output_description='padding_tempmatch_denoise'
-filename='/Users/henryschnieders/Documents/Research/My_work/Data/'+vid+'_padding'+'.npy'
+filename='<USER_HOME>/Documents/Research/My_work/Data/'+vid+'_padding'+'.npy'
 
 
 data=np.load(filename)
@@ -33,7 +33,7 @@ data=np.load(filename)
 # exit()
 # # # print(test)
 
-#/Users/henryschnieders/Documents/Research/My_work/Face_detection_methods/corresponding_dataset_conversion/temmatch_driver_explicitframes_avi.py
+#<USER_HOME>/Documents/Research/My_work/Face_detection_methods/corresponding_dataset_conversion/temmatch_driver_explicitframes_avi.py
 
 
 # cv2.imshow('frame', data[0])
@@ -90,7 +90,7 @@ def find_face(frame, detector):
     return None
 
 
-model_path = '/Users/henryschnieders/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
+model_path = '<USER_HOME>/documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
 detector = cv2.FaceDetectorYN_create(model_path, "", (data[-1].shape[1], data[-1].shape[0]), score_threshold=0.1)
 
 roi, frame_rgb = find_face(data[-1], detector)
@@ -108,7 +108,7 @@ if roi is not None:
     
     cv2.rectangle(frame_rgb, (x, y), (x + w, y + h), (255, 0, 0), 2)
     cv2.imshow('frame', frame_rgb)
-    cv2.imwrite('/Users/henryschnieders/Documents/Research/My_work/Face_detection_methods/data_visualization/'+vid+output_description+'facex'+'.png', frame_rgb)
+    cv2.imwrite('<USER_HOME>/Documents/Research/My_work/Face_detection_methods/data_visualization/'+vid+output_description+'facex'+'.png', frame_rgb)
     cv2.waitKey(2000)
     cv2.destroyAllWindows()
 
@@ -144,7 +144,7 @@ plt.colorbar()
 
 fig.canvas.manager.set_window_title(f'Measured heart rate: {vcenter} bpm')
 
-plt.savefig('/Users/henryschnieders/Documents/Research/My_work/Face_detection_methods/data_visualization/'+vid+output_description+'heatmap'+'.png')
+plt.savefig('<USER_HOME>/Documents/Research/My_work/Face_detection_methods/data_visualization/'+vid+output_description+'heatmap'+'.png')
 
 bpm_flattened = bpm_array.flatten()
 
@@ -158,6 +158,6 @@ plt.grid(axis='y', linestyle='--', alpha=0.7)
 
 fig.canvas.manager.set_window_title(f'Denoise BPM Distribution: {vid}')
 
-plt.savefig('/Users/henryschnieders/Documents/Research/My_work/Face_detection_methods/data_visualization/'+vid+output_description+'histogram'+'.png')
+plt.savefig('<USER_HOME>/Documents/Research/My_work/Face_detection_methods/data_visualization/'+vid+output_description+'histogram'+'.png')
 plt.show()
 

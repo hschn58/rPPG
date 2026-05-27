@@ -61,10 +61,10 @@ def main(frames):
 if __name__=="__main__":
 
     fnum=1000
-    video_data='/Users/henryschnieders/Desktop/Research/My_work/Data/relax.mp4'
-    output_path_vid='/Users/henryschnieders/Desktop/Research/My_work/Real_time_recognition/All_face_sections/amplitude_heatmap/Each_pixel/Pixel_matching_methods/Template_Matching/Results/relax_tempmatch.mp4'
-    output_path_data='/Users/henryschnieders/Desktop/Research/My_work/Real_time_recognition/All_face_sections/amplitude_heatmap/Each_pixel/Pixel_matching_methods/Template_Matching/Data/relax_tempmatch.npy'
-    model_path='/Users/henryschnieders/Desktop/Research/My_work/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
+    video_data='<USER_HOME>/Desktop/Research/My_work/Data/relax.mp4'
+    output_path_vid='<USER_HOME>/Desktop/Research/My_work/Real_time_recognition/All_face_sections/amplitude_heatmap/Each_pixel/Pixel_matching_methods/Template_Matching/Results/relax_tempmatch.mp4'
+    output_path_data='<USER_HOME>/Desktop/Research/My_work/Real_time_recognition/All_face_sections/amplitude_heatmap/Each_pixel/Pixel_matching_methods/Template_Matching/Data/relax_tempmatch.npy'
+    model_path='<USER_HOME>/Desktop/Research/My_work/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx'
 
     frames, fps, frame_width, frame_height = get_frames(video_data)
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # Codec for .mp4 files

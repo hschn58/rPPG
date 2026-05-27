@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 
 # Load the .npy file
-filename = '/Users/henryschnieders/Documents/Research/My_work/Data/sporting_1_frames.npy'
+filename = '<USER_HOME>/Documents/Research/My_work/Data/sporting_1_frames.npy'
 
 # Load the intensity data from the .npy file
 intensity_data = np.load(filename, allow_pickle=True)
@@ -19,7 +19,7 @@ for frame in intensity_data:
         continue
 
 # Define the output video file path and name
-output_video_path = '/Users/henryschnieders/Documents/Research/My_work/Data/reconstructed_video.mp4'
+output_video_path = '<USER_HOME>/Documents/Research/My_work/Data/reconstructed_video.mp4'
 
 # Get the dimensions of the frames from the data
 num_frames = len(fixed_intensity_data)
@@ -49,7 +49,3 @@ out.release()
 cv2.destroyAllWindows()
 
 print(f"Video reconstruction completed: {output_video_path}")
-
-
-
-#try this, if not email zewei. 

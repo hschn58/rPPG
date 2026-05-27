@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-cap = cv2.VideoCapture('/Users/henryschnieders/Desktop/Research/My_work/Data/inorganic.MOV')
+cap = cv2.VideoCapture('<USER_HOME>/Desktop/Research/My_work/Data/inorganic.MOV')
 
 # Read the first frame
 ret, frame = cap.read()

@@ -155,13 +155,13 @@ def process_video(processed_npy):
     plt.show()
 
 
-video_file = '/Users/henryschnieders/Documents/Research/My_work/Data/100_light'+'_padding_color_mp4.npy'
+video_file = '<USER_HOME>/Documents/Research/My_work/Data/100_light'+'_padding_color_mp4.npy'
 
-output_npy = '/Users/henryschnieders/downloads/test.npy'
+output_npy = '<USER_HOME>/downloads/test.npy'
 
-heartrate_npy = '/Users/henryschnieders/downloads/heartrate_test.npy'
+heartrate_npy = '<USER_HOME>/downloads/heartrate_test.npy'
 
-heartrate_distribution = '/Users/henryschnieders/downloads/heartrate_dis.txt'
+heartrate_distribution = '<USER_HOME>/downloads/heartrate_dis.txt'
 
 process_video(video_file)
 

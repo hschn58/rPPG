@@ -11,7 +11,7 @@ import cv2
 
 #make this a function...
 vid_name='relax'
-filename='/Users/henryschnieders/Documents/Research/My_work/Real_time_recognition/All_face_sections/amplitude_heatmap/Each_pixel/Pixel_matching_methods/Template_Matching/Data/relax_tempmatch.npy'
+filename='<USER_HOME>/Documents/Research/My_work/Real_time_recognition/All_face_sections/amplitude_heatmap/Each_pixel/Pixel_matching_methods/Template_Matching/Data/relax_tempmatch.npy'
 
 
 data=np.load(filename, allow_pickle=True)
@@ -68,7 +68,7 @@ for i in range(X_DIM):
 #             # plt.pause(0.01)
         
 
-# plt.savefig('/Users/henryschnieders/Desktop/Research/My_work/Real_time_recognition/All_face_sections/Data/'+f'{vid_name}'+'_bpm.png')
+# plt.savefig('<USER_HOME>/Desktop/Research/My_work/Real_time_recognition/All_face_sections/Data/'+f'{vid_name}'+'_bpm.png')
 #get rid of bad data
 from matplotlib.colors import TwoSlopeNorm
 
@@ -90,5 +90,5 @@ plt.figure(figsize=(5,5))
 plt.title(f'{vid_name} bpm heatmap-{ave:.2f} avgbpm')
 plt.imshow(bpm_array, cmap='seismic', interpolation='nearest', norm=norm)
 plt.colorbar()
-plt.savefig('/Users/henryschnieders/Documents/Research/My_work/Real_time_recognition/All_face_sections/frequency_heatmap/Approaches/Each_pixel/Template_matching/freq_map_tempmatch/Results/'+f'{vid_name}'+'bpm_heatmap_tempmatch_diffsignalprocess.png')
+plt.savefig('<USER_HOME>/Documents/Research/My_work/Real_time_recognition/All_face_sections/frequency_heatmap/Approaches/Each_pixel/Template_matching/freq_map_tempmatch/Results/'+f'{vid_name}'+'bpm_heatmap_tempmatch_diffsignalprocess.png')
 plt.show()

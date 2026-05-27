@@ -161,7 +161,7 @@ def fb_trace_pixels(frames_rgb, lk_params, save_npz=True, source_npy_path=None):
         else:
             base = "unknown_source"
         fname = (
-            f"/Users/henryschnieders/Documents/Research/My_Data/"
+            f"<USER_HOME>/Documents/Research/My_Data/"
             f"pixel_trajectories_{base}.npz"
         )
         np.savez_compressed(fname, trajectories=trajectories_db)

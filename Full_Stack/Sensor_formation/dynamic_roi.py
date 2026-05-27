@@ -35,7 +35,7 @@ def get_params_from_cli_or_prompt():
 
     while True:
         if args.npy is None:
-            args.npy = '/Users/henryschnieders/Documents/Research/My_Data/mornin_6_16_wholeface.npy' #input('Enter whole-frame .npy file: ')
+            args.npy = '<USER_HOME>/Documents/Research/My_Data/mornin_6_16_wholeface.npy' #input('Enter whole-frame .npy file: ')
 
             if not args.npy.endswith(".npy"):
                 continue
@@ -46,7 +46,7 @@ def get_params_from_cli_or_prompt():
 
     while True:
         if args.out is None:
-            args.out = '/Users/henryschnieders/Documents/Research/My_Data/mornin_6_16_trajectories.npz' #input('Enter output path for .npz trajectories: ')
+            args.out = '<USER_HOME>/Documents/Research/My_Data/mornin_6_16_trajectories.npz' #input('Enter output path for .npz trajectories: ')
 
             if not args.out.endswith(".npz"):
                 continue
@@ -74,7 +74,7 @@ mp_mesh = mp.solutions.face_mesh.FaceMesh(static_image_mode=False,
                                          min_tracking_confidence=0.5)
 
 # YuNet fallback (only called when FaceMesh fails > N frames)
-yunet_path = "/Users/henryschnieders/Documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx"
+yunet_path = "<USER_HOME>/Documents/Research/My_work/Other/YuNet-Package/models/face_detection_yunet/face_detection_yunet_2023mar.onnx"
 yunet_det  = cv2.FaceDetectorYN_create(yunet_path, "", (0, 0))
 
 # 3 ── ROI landmark groups (indices follow MediaPipe 468-pt mesh) ──────────────

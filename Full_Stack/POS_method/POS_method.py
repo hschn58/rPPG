@@ -126,7 +126,7 @@ if __name__ == "__main__":
 
     base = os.path.basename(NPZ_FILE).split('.')[0].replace('pixel_trajectories_','') + '_POS_nomotionprocess.pdf'
 
-    pdf_path = f'/Users/henryschnieders/Documents/Research/My_Data/{base}'
+    pdf_path = f'<USER_HOME>/Documents/Research/My_Data/{base}'
 
     with PdfPages(pdf_path) as pdf:
         for f in figs:
