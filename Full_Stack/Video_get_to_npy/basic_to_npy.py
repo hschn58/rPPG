@@ -8,9 +8,7 @@ import re
 
 import objc
 import AVFoundation as AVF
-
 from Cocoa import NSObject
-import AVFoundation as AVF, time
 
 import csv
 
@@ -105,9 +103,12 @@ def max_fps_for_avfoundation(dev_index: str, width: int, height: int, fallback: 
                 "ffmpeg", "-hide_banner",
                 "-f", "avfoundation", "-list_formats", "all", "-i", dev_index
             ],
-            capture_output=True, text=True, check=True
+            capture_output=True, text=True
         ).stderr  # list is printed on stderr
-        pattern = rf"{width}x{height}.*?(\d+(?:\.\d+)?)\s*fps"
+        if width is not None and height is not None:
+            pattern = rf"{width}x{height}.*?(\d+(?:\.\d+)?)\s*fps"
+        else:
+            pattern = r"(\d+(?:\.\d+)?)\s*fps"
         fps_values = [float(m.group(1)) for m in re.finditer(pattern, probe)]
         return int(round(max(fps_values))) if fps_values else fallback
     except Exception:

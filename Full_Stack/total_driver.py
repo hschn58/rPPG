@@ -180,7 +180,7 @@ def run_CHROM_method_wmotionprocess(python_path, CHROM_method_script_with, motio
     print('################################################')
     print('################################################')
     print('\n')
-    print("POS method completed.")
+    print("CHROM method completed.")
     print('\n')
     print('################################################')
     print('################################################')
@@ -224,7 +224,7 @@ def run_POS_method_nomotionprocess(python_path, POS_method_script_without, data_
                 POS_method_script_without,
                 '--data_path', data_npz_file],
                 capture_output=True, text=True, check = True
-                )       
+                )
 
 
     print('\n')
@@ -232,7 +232,7 @@ def run_POS_method_nomotionprocess(python_path, POS_method_script_without, data_
     print('################################################')
     print('################################################')
     print('\n')
-    print("CHROM method completed.")
+    print("POS method completed.")
     print('\n')
     print('################################################')
     print('################################################')

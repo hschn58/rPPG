@@ -21,7 +21,7 @@ def get_params_from_cli_or_prompt():
     args = p.parse_args()
 
     if args.motion_processed_paths is None:
-        args.motion_processsed_paths = input("Enter the path to the pixel trajectories file:")
+        args.motion_processed_paths = input("Enter the path to the pixel trajectories file:")
 
     return args.motion_processed_paths
 

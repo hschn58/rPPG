@@ -95,7 +95,7 @@ def max_fps_for_avfoundation(dev_index: str, width: int, height: int, fallback: 
                 "ffmpeg", "-hide_banner",
                 "-f", "avfoundation", "-list_formats", "all", "-i", dev_index
             ],
-            capture_output=True, text=True, check=True
+            capture_output=True, text=True
         ).stderr  # list is printed on stderr
         pattern = rf"{width}x{height}.*?(\d+(?:\.\d+)?)\s*fps"
         fps_values = [float(m.group(1)) for m in re.finditer(pattern, probe)]
@@ -126,16 +126,14 @@ def track_face(frame, template, bbox):
     xpad = int(0.1*w)
     ypad = int(0.1*h)
 
-    search = frame[max(0,y-ypad):y+h+ypad, max(0,x-xpad):x+w+xpad]
+    x_off = max(0, x - xpad)
+    y_off = max(0, y - ypad)
+    search = frame[y_off:y+h+ypad, x_off:x+w+xpad]
     res = cv2.matchTemplate(search, template, cv2.TM_CCOEFF_NORMED)
-
-    res = cv2.matchTemplate(frame, template, cv2.TM_CCOEFF_NORMED)
     _, _, _, max_loc = cv2.minMaxLoc(res)
 
-    top_left = max_loc
-    
-    w, h = template.shape[1], template.shape[0]  # Width and height from template
-    return (top_left[0], top_left[1], w, h)
+    w, h = template.shape[1], template.shape[0]
+    return (max_loc[0] + x_off, max_loc[1] + y_off, w, h)
 
 # Extract regions using your params
 def extract_regions(frame, bbox):

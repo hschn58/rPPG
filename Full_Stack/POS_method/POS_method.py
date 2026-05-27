@@ -7,7 +7,7 @@ from scipy.signal import butter, filtfilt, welch, detrend
 from matplotlib.backends.backend_pdf import PdfPages
 import argparse, os
 
-
+BAND = (0.7, 4.0)          # 42–240 BPM
 
 
 # ---------------- POS helper -----------------------------------
@@ -81,7 +81,6 @@ if __name__ == "__main__":
     CUT_FRAMES   = 25      # discard frames at start & end
     FPS          = 30
     REGIONS      = 5
-    BAND         = (0.7, 4.0)          # 42–240 BPM
 
     # ---------------- load & rebuild RGB per region ----------------
     traj = np.load(NPZ_FILE, allow_pickle=True)['trajectories'].tolist()

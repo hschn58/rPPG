@@ -24,8 +24,9 @@ def signal_process_alter(pix_intensity, fps, num = 5):
     lowcut_heart, highcut_heart = 0.5, 4.0
 
     N = len(pix_intensity)
+    window = np.hanning(N)
     freqs = np.fft.fftfreq(N, d=1.0 / sampling_rate)
-    coefs = np.fft.fft(pix_intensity)
+    coefs = np.fft.fft(pix_intensity * window)
 
     keep = (np.abs(freqs) >= lowcut_heart) & (np.abs(freqs) <= highcut_heart)
     coefs, freqs = coefs[keep], freqs[keep]
@@ -46,10 +47,10 @@ def build_gray(rgb_arr):
 
 def process_tracks_motion_sigma(db,
                                 n_regions,
-                                std_thresh=5,      # “X σ” threshold
+                                std_thresh=3,      # “X σ” threshold
                                 window_frac=0.10,  # sliding-window size for z-score normalisation
                                 eps=1e-12):
-    """
+    “””
     Build region-level grey / RGB / motion signals after discarding, frame-by-frame,
     any track whose motion magnitude deviates more than `std_thresh` standard
     deviations from the region mean for that frame.
@@ -66,7 +67,7 @@ def process_tracks_motion_sigma(db,
         Fraction of track length used for centred sliding-window z-scoring.  Default = 0.10.
     eps : float, optional
         Small value to avoid division by zero.
-    """
+    “””
     # ---------- pass 1: per-track normalisation + motion magnitude ----------
     n_frames = len(db[0]['rgb'])
     window_size = max(1, int(len(db[0]['rgb']) * window_frac))
@@ -282,9 +283,8 @@ if __name__ == '__main__':
     plt.tight_layout(rect=[0, 0, 1, 0.96])
 
     st.pyplot(fig)  # Display in Streamlit app
-    plt.close(fig)  # Close the figure to free memory
-
     plt.savefig('<USER_HOME>/Desktop/movavg_intensity_per_region.png', dpi=300)
+    plt.close(fig)
 
     # --- estimate BPM: heart rate from polished signal -----------------
     hr_est = []
@@ -322,9 +322,8 @@ if __name__ == '__main__':
     plt.tight_layout(rect=[0, 0, 1, 0.96])
 
     st.pyplot(fig)  # Display in Streamlit app
-    plt.close(fig)  # Close the figure to free memory
-
     plt.savefig('<USER_HOME>/Desktop/raw_grayscale_per_region.png', dpi=300)
+    plt.close(fig)
 
     # --------- Plot 1: motion ----------
     fig = plt.figure(figsize=(12,10))
@@ -338,9 +337,8 @@ if __name__ == '__main__':
     plt.suptitle("Motion filtered out of raw signal per region"); plt.tight_layout(rect=[0,0,1,0.96])
 
     st.pyplot(fig)  # Display in Streamlit app
-    plt.close(fig)  # Close the figure to free memory
-
     plt.savefig('<USER_HOME>/Desktop/motion_per_region.png', dpi=300)
+    plt.close(fig)
 
     # --------- Plot 2: intensity -------
     fig = plt.figure(figsize=(12,10))
@@ -353,9 +351,8 @@ if __name__ == '__main__':
     plt.suptitle("Filtered signal per region"); plt.tight_layout(rect=[0,0,1,0.96])
 
     st.pyplot(fig)  # Display in Streamlit app
-    plt.close(fig)  # Close the figure to free memory
-
     plt.savefig('<USER_HOME>/Desktop/avg_intensity_per_region.png', dpi=300)
+    plt.close(fig)
 
     # lookup example
     who = "x250_y180"
